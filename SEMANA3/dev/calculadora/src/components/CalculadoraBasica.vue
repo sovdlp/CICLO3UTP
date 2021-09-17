@@ -1,5 +1,6 @@
 <template>
   <div>
+      <encabezado />
       <h1>Calculadora Básica</h1>
       <v-text-field
        label="Número 1"
@@ -52,8 +53,12 @@
 </template>
 
 <script>
+import Encabezado from './Encabezado.vue';
 export default {
-      name: 'CalculadoraBasica',
+  name: 'CalculadoraBasica',
+  components: {
+      Encabezado
+  },
     data:()=>{
         return {
             n1: null,
