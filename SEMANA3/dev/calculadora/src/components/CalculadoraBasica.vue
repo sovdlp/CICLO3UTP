@@ -53,7 +53,7 @@
 
 <script>
 export default {
-    name: 'CalculadoraBasica',
+      name: 'CalculadoraBasica',
     data:()=>{
         return {
             n1: null,
