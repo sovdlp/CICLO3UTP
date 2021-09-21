@@ -66,7 +66,6 @@
             @click="divide()"
             >divide</v-btn>
         </v-col>
-        </v-col>
       </v-row>
       <br />
       <span>{{ respuesta }}</span>
