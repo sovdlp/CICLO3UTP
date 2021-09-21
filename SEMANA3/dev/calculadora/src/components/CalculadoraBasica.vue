@@ -25,38 +25,49 @@
         </v-col>
       </v-row>
       <br />
-      <v-btn
-        color="primary"
-        elevation="2"
-        outlined
-        rounded
-        small
-        @click="suma()"
-        >suma</v-btn>
-      <v-btn
-        color="primary"
-        elevation="2"
-        outlined
-        rounded
-        small
-        @click="resta()"
-        >resta</v-btn>
-      <v-btn
-        color="primary"
-        elevation="2"
-        outlined
-        rounded
-        small
-        @click="multiplica()"
-        >multiplica</v-btn>
-        <v-btn
-        color="primary"
-        elevation="2"
-        outlined
-        rounded
-        small
-        @click="divide()"
-        >divide</v-btn>
+      <v-row>
+        <v-col class="text-right">
+          <v-btn
+            color="primary"
+            elevation="2"
+            outlined
+            rounded
+            small
+            @click="suma()"
+            >suma</v-btn>
+        </v-col>
+        <v-col class="text-center">
+          <v-btn
+            color="primary"
+            elevation="2"
+            outlined
+            rounded
+            small
+            @click="resta()"
+            >resta</v-btn>
+        </v-col>
+        <v-col class="text-center">
+          <v-btn
+            color="primary"
+            elevation="2"
+            outlined
+            rounded
+            small
+            @click="multiplica()"
+            >multiplica</v-btn>
+        </v-col>
+        <v-col class="text-left">
+            <v-btn
+            color="primary"
+            elevation="2"
+            outlined
+            rounded
+            small
+            @click="divide()"
+            >divide</v-btn>
+        </v-col>
+        </v-col>
+      </v-row>
       <br />
       <span>{{ respuesta }}</span>
   </v-container>
