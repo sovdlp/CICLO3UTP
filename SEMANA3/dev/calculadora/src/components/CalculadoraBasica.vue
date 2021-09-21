@@ -1,19 +1,29 @@
 <template>
-  <div>
+  <v-container>
       <encabezado />
-      <h1>Calculadora Básica</h1>
-      <v-text-field
-       label="Número 1"
-       :rules="rules"
-       hide-details="auto"
-       v-model="n1"
-      ></v-text-field>
-      <v-text-field
-       label="Número 2"
-       :rules="rules"
-       hide-details="auto"
-       v-model="n2"
-      ></v-text-field>
+      <v-row>
+        <v-col>
+          <h1 class="text-center">Calculadora Básica</h1>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-text-field
+            label="Número 1"
+            :rules="rules"
+            hide-details="auto"
+            v-model="n1"
+          ></v-text-field>
+        </v-col>
+        <v-col>
+          <v-text-field
+          label="Número 2"
+          :rules="rules"
+          hide-details="auto"
+          v-model="n2"
+          ></v-text-field>
+        </v-col>
+      </v-row>
       <br />
       <v-btn
         color="primary"
@@ -49,7 +59,7 @@
         >divide</v-btn>
       <br />
       <span>{{ respuesta }}</span>
-  </div>
+  </v-container>
 </template>
 
 <script>
