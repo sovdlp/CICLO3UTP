@@ -5,7 +5,7 @@
 <script>
 import Personajes from '../components/Personajes.vue'
 export default {
-  components: { Personajes },
+  components: Personajes,
 
 }
 </script>
