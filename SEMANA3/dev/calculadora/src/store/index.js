@@ -1,35 +1,25 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import ListarPersonajes from '../views/ListarPersonajes.vue'
+import Vuex from 'vuex'
 
-Vue.use(VueRouter)
+Vue.use(Vuex)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
+export default new Vuex.Store({
+  state: {
+    personajes: []
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  mutations: {
+    setPersonajes(state, payload){
+      state.personajes = payload;
+    }
   },
-  {
-    path: '/listarpersonajes',
-    name: 'ListarPersonajes',
-    component: ListarPersonajes
-  } 
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+  actions: {
+    async getPersonajes({commit}){
+      const peticion = await fetch('https://futuramaapi.herokuapp.com/api/v2/characters');
+      const data = await peticion.json();
+      console.log(data);
+      commit('setPersonajes', data);
+    }
+  },
+  modules: {
+  }
 })
-
-export default router

@@ -23,7 +23,7 @@ const routes = [
     path: '/listarpersonajes',
     name: 'ListarPersonajes',
     component: ListarPersonajes
-  },
+  } 
 ]
 
 const router = new VueRouter({
