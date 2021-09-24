@@ -3,13 +3,13 @@
 </template>
 
 <script>
-import Personajes from '../components/Personajes.vue'
+import Personajes from "../components/Personajes.vue";
 export default {
-  components: Personajes,
-
-}
+  components: {
+    Personajes,
+  },
+};
 </script>
 
 <style>
-
 </style>
