@@ -26,7 +26,7 @@ class Server{
         const router = express.Router();
         router.get('/', (req, res)=>{
             console.log("Nueva conexión");
-            res.status(200).json({message: "HOLA MUNDO"});
+            res.status(200).json({message: "Hola mundo!"});
         });
         const serverR = new serverRouter.default();
         
