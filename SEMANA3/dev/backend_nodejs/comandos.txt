@@ -1,9 +1,0 @@
-//-------- Iniciando la configuracion del package.json
-npm init -y
-
-//-------- Instalar Express
-npm install express
-
-//-------- INstalar Nodemon
-npm install nodemon 
-
